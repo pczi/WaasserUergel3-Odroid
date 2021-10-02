@@ -50,12 +50,12 @@ void setup()
   wjD.clearDisplay();
 
   // bluetooth LE
-  BLEDevice::init("");
-  pBLEScan = BLEDevice::getScan(); //create new scan
-  pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
-  pBLEScan->setActiveScan(true); //active scan uses more power, but get results faster
-  pBLEScan->setInterval(100);
-  pBLEScan->setWindow(99); // less or equal setInterval value
+  //BLEDevice::init("");
+  //pBLEScan = BLEDevice::getScan(); //create new scan
+  //pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
+  //pBLEScan->setActiveScan(true); //active scan uses more power, but get results faster
+  //pBLEScan->setInterval(100);
+  //pBLEScan->setWindow(99); // less or equal setInterval value
 
 #if SCAN_BLUETOOTH_DEVICES == 1
   Serial.println("Scanning...");
@@ -122,9 +122,9 @@ void loop()
   txdata.VolumeBeatDetected = false;
 
   //check and see if a data packet has come in.
-  if (ETin.receiveData())
-  {
-  }
+  //if (ETin.receiveData())
+  //{
+  //}
 
   // static bool pl = true;
   // if (GO.BtnA.isPressed() == 1)
